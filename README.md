@@ -5,9 +5,9 @@ Ubuntu Releases for EBC7702 Series Board.
 
 Ubuntu Image releases for EBC7702 Series Board.
 - Based on Ubuntu 24.04.2 LTS.
-- Prebuilt Ubuntu image in compressed format named `ubuntu-24.04-preinstalled-server-riscv64.img.zst`.
+- Prebuilt Ubuntu image in compressed format named `d560-ubuntu-24.04-preinstalled-server-riscv64.img.zst`.
 - Please ensure that the validated combination of the bootloader image and the Ubuntu image are flashed to the board. The release notes provide the version and validation details.
-- The latest images release is available [here](https://github.com/eswincomputing/hifive-premier-p550-ubuntu/releases/tag/2025.07.30).
+- The latest images release is available [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.07.30).
 
 ## Hardware preparation
 - One Type-C USB cable (for serial port monitor and uboot command)
@@ -20,7 +20,7 @@ For example
 ```
 USB    /- bootloader_EBC7702-D01_die0.bin
         |- bootloader_EBC7702-D01_die1.bin
-        |- ubuntu-24.04-preinstalled-server-riscv64.img
+        |- d560-ubuntu-24.04-preinstalled-server-riscv64.img
 ```
 connect the USB flash driver to the **bottom** usb port of the  board and power up and wait for the uboot shell through the serial port.
 
@@ -50,7 +50,7 @@ scanning bus usb1@50490000 for devices... 4 USB Device(s) found
 => ls usb 0
 <DIR>       4096 .
 <DIR>       4096 ..
-      7714209280 ubuntu-24.04-preinstalled-server-riscv64.img
+      7714209280 d560-ubuntu-24.04-preinstalled-server-riscv64.img
          4496952 bootloader_EBC7702-D01_die0.bin
          4496952 bootloader_EBC7702-D01_die1.bin
 => ext4load usb 0 0x100000000 bootloader_EBC7702-D01_die0.bin
@@ -86,24 +86,20 @@ bootloader write OK with logo
 =>
 ```
 
-:::warning
-If you are using a bootloader version prior to `2025.06.30` and want to  upgrade to bootloader version `2025.06.30` or later, you cannot directly use the `es_burn` command to flash the bootloader; instead, you must flash it following the `RECOVER BOOTLOADER` method.
-:::
-
 ### Ubuntu image burning
 ```
-=> es_fs write usb 0 ubuntu-24.04-preinstalled-server-riscv64.img mmc 0
+=> es_fs write usb 0 d560-ubuntu-24.04-preinstalled-server-riscv64.img mmc 0
 => reset
 ```
 Demo output
 ```
-=> es_fs write usb 0 ubuntu-24.04-preinstalled-server-riscv64.img mmc 0
+=> es_fs write usb 0 d560-ubuntu-24.04-preinstalled-server-riscv64.img mmc 0
 Write progress:  87%:+++++++++++++++++++++++++++++++++++++++++++
 ```
 
 ### Essdk deb packeges install
 
-If you find that installing essdk deb packages using `apt install` is too slow, you can download the essdk and ffmpeg deb packages from essdk_ffmpeg_0730.zip [here](https://github.com/eswincomputing/hifive-premier-p550-ubuntu/releases/tag/2025.07.30) and install them by `dpkg -i XXXX.deb`.
+If you find that installing essdk deb packages using `apt install` is too slow, you can download the essdk and ffmpeg deb packages from essdk_ffmpeg_0730.zip [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.07.30) and install them by `dpkg -i XXXX.deb`.
 
 ## Download from network disk
 
