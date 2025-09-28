@@ -50,9 +50,9 @@ scanning bus usb1@50490000 for devices... 4 USB Device(s) found
 => ls usb 0
 <DIR>       4096 .
 <DIR>       4096 ..
-      7714209280 d560-ubuntu-24.04-preinstalled-server-riscv64.img
-         4496952 bootloader_EBC7702-D01_die0.bin
-         4496952 bootloader_EBC7702-D01_die1.bin
+      7778653696 d560-ubuntu-24.04-preinstalled-server-riscv64.img
+         5567208 bootloader_EBC7702-D01_die0.bin
+         1447436 bootloader_EBC7702-D01_die1.bin
 => ext4load usb 0 0x100000000 bootloader_EBC7702-D01_die0.bin
 4496952 bytes read in 27 ms (158.8 MiB/s)
 =>  es_burn write 0x100000000 flash 0
