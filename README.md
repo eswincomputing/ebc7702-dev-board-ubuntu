@@ -54,36 +54,77 @@ scanning bus usb1@50490000 for devices... 4 USB Device(s) found
          5567208 bootloader_EBC7702-D01_die0.bin
          1447436 bootloader_EBC7702-D01_die1.bin
 => ext4load usb 0 0x100000000 bootloader_EBC7702-D01_die0.bin
-4496952 bytes read in 27 ms (158.8 MiB/s)
-=>  es_burn write 0x100000000 flash 0
-BOOT_SPI_BASE 51800000 disable flash wp
- 85 65 18 85 65 18
+5567208 bytes read in 71 ms (74.8 MiB/s)
+=> es_burn write 0x100000000 flash 
+Bootspi flash write protection disabled
+SF: 4096 bytes @ 0x1000 Read: OK
+Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 4096 bytes @ 0x1000 Erased: OK
+Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 0x1000 bytes @ 0x1000 Written: OK
+SF: 4096 bytes @ 0x0 Read: OK
 FIRMWARE writing...
 Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: 90c bytes @ 50000 Erased: OK
+SF: 2362 bytes @ 0x50000 Erased: OK
 Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: 0x90c bytes @ 50000 Written: OK
+SF: 0x93a bytes @ 0x50000 Written: OK
 DDR writing...
 Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: acf40 bytes @ 51000 Erased: OK
+SF: 709120 bytes @ 0x51000 Erased: OK
 Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: 0xacf40 bytes @ 51000 Written: OK
+SF: 0xad200 bytes @ 0x51000 Written: OK
 D2D writing...
 Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: b158c bytes @ fe000 Erased: OK
+SF: 743852 bytes @ 0xff000 Erased: OK
 Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: 0xb158c bytes @ fe000 Written: OK
+SF: 0xb59ac bytes @ 0xff000 Written: OK
 BOOTLOADER writing...
 Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: 3eb508 bytes @ 1b0000 Erased: OK
+SF: 4110792 bytes @ 0x1b5000 Erased: OK
 Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: 0x3eb508 bytes @ 1b0000 Written: OK
+SF: 0x3eb9c8 bytes @ 0x1b5000 Written: OK
+BOOTCHAIN HEAD writing...
 Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: 1000 bytes @ 0 Erased: OK
+SF: 4096 bytes @ 0x0 Erased: OK
 Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
-SF: 0x1000 bytes @ 0 Written: OK
-bootloader write OK with logo
+SF: 0x1000 bytes @ 0x0 Written: OK
+bootloader write OK
+Bootspi flash write protection enabled
 =>
+
+
+=> ext4load usb 0 0x100000000 bootloader_EBC7702-D01_die1.bin
+1447436 bytes read in 26 ms (53.1 MiB/s)
+=> es_burn write 0x100000000 flash 1
+Bootspi flash write protection disabled
+SF: 4096 bytes @ 0x1000 Read: OK
+Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 4096 bytes @ 0x1000 Erased: OK
+Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 0x1000 bytes @ 0x1000 Written: OK
+SF: 4096 bytes @ 0x0 Read: OK
+FIRMWARE writing...
+Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 2418 bytes @ 0x50000 Erased: OK
+Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 0x972 bytes @ 0x50000 Written: OK
+DDR writing...
+Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 709120 bytes @ 0x51000 Erased: OK
+Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 0xad200 bytes @ 0x51000 Written: OK
+D2D writing...
+Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 735084 bytes @ 0xff000 Erased: OK
+Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 0xb376c bytes @ 0xff000 Written: OK
+BOOTCHAIN HEAD writing...
+Erase progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 4096 bytes @ 0x0 Erased: OK
+Write progress: 100%:++++++++++++++++++++++++++++++++++++++++++++++++++
+SF: 0x1000 bytes @ 0x0 Written: OK
+bootloader write OK
+Bootspi flash write protection enabled
 ```
 
 ### Ubuntu image burning
