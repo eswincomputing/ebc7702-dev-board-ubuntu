@@ -31,7 +31,7 @@ If your device already has a compatible bootloader installed, you can skip this 
 => usb reset
 => ls usb 0
 => ext4load usb 0 0x100000000 bootloader_EBC7702-D01_die0.bin
-=> es_burn write 0x100000000 flash 0
+=> es_burn write 0x100000000 flash
 => ext4load usb 0 0x100000000 bootloader_EBC7702-D01_die1.bin
 => es_burn write 0x100000000 flash 1
 ```
