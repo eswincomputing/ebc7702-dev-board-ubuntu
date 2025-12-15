@@ -5,7 +5,7 @@ Ubuntu Releases for EBC7702 Series Board.
 
 Ubuntu Image releases for EBC7702 Series Board.
 - Based on Ubuntu 24.04.2 LTS.
-- Prebuilt Ubuntu image in compressed format named `d560-ubuntu-24.04-preinstalled-server-riscv64.img.zst`.
+- Prebuilt Ubuntu image in compressed format named `d560-ubuntu-24.04-preinstalled-server-riscv64_20251210_2234_40.img.zst`.
 - Please ensure that the validated combination of the bootloader image and the Ubuntu image are flashed to the board. The release notes provide the version and validation details.
 - The latest images release is available [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.10.30).
 
