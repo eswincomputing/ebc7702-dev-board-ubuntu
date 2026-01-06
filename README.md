@@ -1,5 +1,6 @@
 # ebc7702-dev-board-ubuntu
-Ubuntu Releases for EBC7702 Series Board.
+- Ubuntu Releases for EBC7702 Series Board.
+- Pitch video [here](https://www.eswincomputing.com/community/api/uploads/2026/01/06/1767689014a56db0e06be67838.mp4).
 
 ## Description
 
