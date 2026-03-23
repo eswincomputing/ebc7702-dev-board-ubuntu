@@ -6,7 +6,7 @@
 
 Ubuntu Image releases for EBC7702 Series Board.
 - Based on Ubuntu 24.04.2 LTS.
-- Prebuilt Ubuntu image in compressed format named `d560-ubuntu-24.04-preinstalled-server-riscv64_20251210_2234_40.img.zst`.
+- Prebuilt Ubuntu image in compressed format named `d560-ubuntu-24.04-preinstalled-server-riscv64_20260313_1628_70.img.zst`.
 - Please ensure that the validated combination of the bootloader image and the Ubuntu image are flashed to the board. The release notes provide the version and validation details.
 - The latest images release is available [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.12.30).
 
@@ -141,7 +141,7 @@ Write progress:  87%:+++++++++++++++++++++++++++++++++++++++++++
 
 ### Essdk deb packeges install
 
-If you find that installing essdk deb packages using `apt install` is too slow, you can download the essdk and ffmpeg deb packages from essdk_ffmpeg_251030.zip [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.12.30) and install them by `dpkg -i XXXX.deb`.
+If you find that installing essdk deb packages using `apt install` is too slow, you can download the essdk and ffmpeg deb packages from essdk_ffmpeg_251230.zip [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.12.30) and install them by `dpkg -i XXXX.deb`.
 
 ## Download from network disk
 
