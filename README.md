@@ -8,7 +8,7 @@ Ubuntu Image releases for EBC7702 Series Board.
 - Based on Ubuntu 24.04.2 LTS.
 - Prebuilt Ubuntu image in compressed format named `d560-ubuntu-24.04-preinstalled-server-riscv64_20251210_2234_40.img.zst`.
 - Please ensure that the validated combination of the bootloader image and the Ubuntu image are flashed to the board. The release notes provide the version and validation details.
-- The latest images release is available [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.10.30).
+- The latest images release is available [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.12.30).
 
 ## Hardware preparation
 - One Type-C USB cable (for serial port monitor and uboot command)
@@ -21,7 +21,7 @@ For example
 ```
 USB    /- bootloader_EBC7702-D01_die0.bin
         |- bootloader_EBC7702-D01_die1.bin
-        |- d560-ubuntu-24.04-preinstalled-server-riscv64_20251210_2234_40.img
+        |- d560-ubuntu-24.04-preinstalled-server-riscv64_20260313_1628_70.img
 ```
 connect the USB flash driver to the **bottom** usb port of the  board and power up and wait for the uboot shell through the serial port.
 
@@ -51,7 +51,7 @@ scanning bus usb1@50490000 for devices... 4 USB Device(s) found
 => ls usb 0
 <DIR>       4096 .
 <DIR>       4096 ..
-      7778653696 d560-ubuntu-24.04-preinstalled-server-riscv64_20251210_2234_40.img
+      7778653696 d560-ubuntu-24.04-preinstalled-server-riscv64_20260313_1628_70.img
          5567208 bootloader_EBC7702-D01_die0.bin
          1447436 bootloader_EBC7702-D01_die1.bin
 => ext4load usb 0 0x100000000 bootloader_EBC7702-D01_die0.bin
@@ -130,22 +130,22 @@ Bootspi flash write protection enabled
 
 ### Ubuntu image burning
 ```
-=> es_fs write usb 0 d560-ubuntu-24.04-preinstalled-server-riscv64_20251210_2234_40.img mmc 0
+=> es_fs write usb 0 d560-ubuntu-24.04-preinstalled-server-riscv64_20260313_1628_70.img mmc 0
 => reset
 ```
 Demo output
 ```
-=> es_fs write usb 0 d560-ubuntu-24.04-preinstalled-server-riscv64_20251210_2234_40.img mmc 0
+=> es_fs write usb 0 d560-ubuntu-24.04-preinstalled-server-riscv64_20260313_1628_70.img mmc 0
 Write progress:  87%:+++++++++++++++++++++++++++++++++++++++++++
 ```
 
 ### Essdk deb packeges install
 
-If you find that installing essdk deb packages using `apt install` is too slow, you can download the essdk and ffmpeg deb packages from essdk_ffmpeg_251030.zip [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.10.30) and install them by `dpkg -i XXXX.deb`.
+If you find that installing essdk deb packages using `apt install` is too slow, you can download the essdk and ffmpeg deb packages from essdk_ffmpeg_251030.zip [here](https://github.com/eswincomputing/ebc7702-dev-board-ubuntu/releases/tag/2025.12.30) and install them by `dpkg -i XXXX.deb`.
 
 ## Download from network disk
 
-If you are unable to download images from GitHub and you are in China, you can try downloading them [here](https://pan.baidu.com/s/1fhJ_VfLI90ODvrPKPdrK_A?pwd=82iu).
+If you are unable to download images from GitHub and you are in China, you can try downloading them [here](https://pan.baidu.com/s/1UKcUUYrYutWIY0CIpNay9g?pwd=8u2m).
 
 ## Login to the board Using Serial Console
 
